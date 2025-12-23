@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify Certificate • Digital Certificate Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-root">
+    <header class="app-header app-header-simple">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-mark">🔍</div>
+          <div class="brand-text">
+            <span class="brand-title">Certificate Verification</span>
+            <span class="brand-subtitle">Instant authenticity check</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="admin.html" class="nav-link">Admin</a>
+          <a href="participant.html" class="nav-link">Participant</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section class="page-section">
+        <div class="container page-container">
+          <div class="card card-form verify-card">
+            <h2 class="card-title">Verify a Certificate</h2>
+            <p class="card-text">
+              Enter the unique certificate ID printed on the document to verify its authenticity.
+            </p>
+
+            <div class="form-field">
+              <label for="certId" class="field-label">Certificate ID</label>
+              <input id="certId" placeholder="e.g. CERT-XYZ-12345" class="field-input">
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-primary btn-full" onclick="verifyCertificate()">Verify</button>
+            </div>
+
+            <div id="output" class="verify-output" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/verify.js"></script>
+</body>
+</html>

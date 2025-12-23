@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Participant Portal • Digital Certificate Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-root">
+    <header class="app-header app-header-simple">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-mark">🎓</div>
+          <div class="brand-text">
+            <span class="brand-title">Participant Dashboard</span>
+            <span class="brand-subtitle">Access your issued certificates</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="admin.html" class="nav-link">Admin</a>
+          <a href="verify.html" class="nav-link nav-link-primary">Verify</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section class="page-section">
+        <div class="container page-container">
+          <div class="card card-form step-card">
+            <div class="step-header">
+              <span class="step-indicator step-active">1</span>
+              <span class="step-label">Identify yourself</span>
+            </div>
+
+            <p class="card-text">
+              Enter the email address that was used during registration to view your certificates.
+            </p>
+
+            <div class="form-field">
+              <label for="email" class="field-label">Registered Email</label>
+              <input id="email" placeholder="you@example.com" class="field-input">
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-primary btn-full" onclick="fetchCertificates()">View Certificate</button>
+            </div>
+
+            <div id="result" class="result-panel" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/participant.js"></script>
+</body>
+</html>

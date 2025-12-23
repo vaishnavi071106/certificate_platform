@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard • Digital Certificate Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-root">
+    <header class="app-header app-header-simple">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-mark">🎓</div>
+          <div class="brand-text">
+            <span class="brand-title">Admin Dashboard</span>
+            <span class="brand-subtitle">Manage events & issue certificates</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="participant.html" class="nav-link">Participant</a>
+          <a href="verify.html" class="nav-link nav-link-primary">Verify</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section class="page-section">
+        <div class="container page-container">
+          <div class="card card-form">
+            <h2 class="card-title">Event & Certificate Setup</h2>
+            <p class="card-text">
+              Provide the event details and upload the required files to generate certificates in bulk.
+            </p>
+
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="eventName" class="field-label">Event Name</label>
+                <input id="eventName" placeholder="e.g. Annual Tech Symposium 2025" class="field-input">
+              </div>
+
+              <div class="form-field">
+                <label class="field-label" for="template">Upload Certificate Template</label>
+                <div class="field-file">
+                  <input type="file" id="template">
+                </div>
+                <p class="field-help">Supported formats: image or PDF template for your certificate.</p>
+              </div>
+
+              <div class="form-field">
+                <label class="field-label" for="csv">Upload Participants CSV</label>
+                <div class="field-file">
+                  <input type="file" id="csv">
+                </div>
+                <p class="field-help">Include participant name, email and any additional fields.</p>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-primary btn-full" onclick="generateCertificates()">Generate Certificates</button>
+            </div>
+
+            <p id="status" class="status-text" aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
